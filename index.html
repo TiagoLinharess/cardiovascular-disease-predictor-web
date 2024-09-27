@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DCV Diagnosis</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <main>
+      <div class="form-container">
+        <label for="age">Idade</label>
+        <input type="number" name="age" id="age" />
+
+        <label for="sex">Sexo do paciente</label>
+        <select name="sex-selection" id="sex">
+          <option selected disabled value="">Selecione uma opção</option>
+          <option value="0">mulher</option>
+          <option value="1">homem</option>
+        </select>
+
+        <label for="cp">Tipo da dor toráxica</label>
+        <select name="cs-selection" id="cp">
+          <option selected disabled value="">Selecione uma opção</option>
+          <option value="1">Angina típica</option>
+          <option value="2">Angina atípica</option>
+          <option value="3">Dor não cardíaca</option>
+          <option value="4">Assintomática</option>
+        </select>
+
+        <label for="trestbps">Pressão arterial em repouso</label>
+        <input type="number" name="trestbps" id="trestbps" />
+
+        <label for="chol">Colesterol sérico (mg/dl)</label>
+        <input type="number" name="chol" id="chol" />
+
+        <label for="fbs">Açúcar no sangue em jejum > 120mg/dl</label>
+        <select name="fbs-selection" id="fbs">
+          <option selected disabled value="">Selecione uma opção</option>
+          <option value="0">Não</option>
+          <option value="1">Sim</option>
+        </select>
+
+        <label for="restecg">Resultado do eletrocardiograma em repouso</label>
+        <select name="restecg-selection" id="restecg">
+          <option selected disabled value="">Selecione uma opção</option>
+          <option value="0">Normal</option>
+          <option value="1">
+            Anormalidade de ST-T (inversão da onda T e elevação ou depressão de
+            > 0.05mV)
+          </option>
+          <option value="2">
+            Hipertrofia ventricular esquerda provável ou definitiva (pelos
+            critérios de Romhilt-Estes)
+          </option>
+        </select>
+
+        <label for="thalach">Frequência cardíaca máxima atingida</label>
+        <input type="number" name="thalach" id="thalach" />
+
+        <label for="exang">Angina induzida pelo exercício?</label>
+        <select name="exang-selection" id="exang">
+          <option selected disabled value="">Selecione uma opção</option>
+          <option value="0">Não</option>
+          <option value="1">Sim</option>
+        </select>
+
+        <label for="oldpeak">
+          Depessão do segmento ST induzida pelo exercício em relação ao repouso
+        </label>
+        <input type="number" name="oldpeak" id="oldpeak" />
+
+        <label for="slope">
+          Inclinação do segmento ST no pico do exercício
+        </label>
+        <input type="number" name="slope" id="slope" />
+
+        <label for="ca">
+          Número de vasos principais colorido por fluoroscopia
+        </label>
+        <input type="number" name="ca" id="ca" />
+
+        <label for="thal">Angina induzida pelo exercício?</label>
+        <select name="thal-selection" id="thal">
+          <option selected disabled value="">Selecione uma opção</option>
+          <option value="3">Normal</option>
+          <option value="6">Defeito fixo</option>
+          <option value="7">Defeito reversível</option>
+        </select>
+
+        <button onclick="onClick()" type="button" id="form-button">
+          Enviar dados
+        </button>
+      </div>
+      <div id="feedback-message"></div>
+    </main>
+  </body>
+</html>

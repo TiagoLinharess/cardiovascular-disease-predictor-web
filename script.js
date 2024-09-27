@@ -40,7 +40,7 @@ const postFormData = async () => {
   const thal = document.getElementById("thal").value;
 
   const formData = new FormData();
-  const url = "http://localhost:5001/predict";
+  const url = "http://localhost:5000/predict";
   formData.append('age', age);
   formData.append('sex', sex);
   formData.append('cp', cp);
